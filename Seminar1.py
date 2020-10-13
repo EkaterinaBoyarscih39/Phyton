@@ -8,11 +8,10 @@ if len(arr)-1<N:
 else:
 	print(arr[N]**N)
 #3. Найти второй индекс входного символа во входной строке. 
-string = "tutor"
-symbol="t"
-index=0
-fi = 0
-print (string.rfind(symbol))
+s = "магистратура"
+symbol="р"
+index=2
+print (s.rfind(symbol))
 
 #4. Найти количество нулей в конце входного числа. 
 n=(10010010001000)
@@ -25,9 +24,36 @@ print(Count)
 string = "what"
 print (string[::-1])
 #6. Проверить состоит ли входной массив исключительного из одного и того же значения. 
-
+arr = [1,2,5,1,1]
+for i in arr:
+    if i == arr[0]:
+        a = True
+else: 
+    a = False    
+print (a)
 #7. Проверить сложность пароля во входной строке. Пароль должен содержать, как минимум, одну букву в нижнем регистре, одну букву в верхнем регистре, одну цифру и не содержит никаких других символов. Минимальная длина пароля 16 символов. 
-
+password = "q5465645678weDFKL89485rty"
+var_1 = '1234567890'
+var_2 =  'abcdefghijklmnopqrstuvwxyz'
+var_3 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+s = (var_1+var_2+var_3)
+a1=a2=a3=a4= False
+for i in password:
+    if i not in s:
+        print("Ошибка. Запрещенный спецсимвол")
+        a4 = True
+for i in password:
+    if i in var_1:
+        a1 = True
+    if i in var_2:
+        a2 = True
+    if i in var_3:
+        a3 = True
+if a4 == False:
+    if a1 and a2 and a3 == True and len(password) >=16:    
+        print("Сильный пароль")
+    else:
+        print("Слабый пароль")
 #8. Во входном списке имеются вложенные списки, которые также могут иметь вложенные списки. Необходимо вытянуть список в одномерный массив (flatten). 
 
 #9. На вход принимается словарь(dict), в котором ключами являются строки (str), а значениями числа (float). Необходимо вернуть ключ максимального значения. 
